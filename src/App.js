@@ -63,44 +63,24 @@ state={ data:[
     return (
       <div className="App">
         <HeaderComponent Header="Welcome to My React App..!!!" />
-        <InputComponent  Id={(this.state.data)[0].id}
-        name={(this.state.data)[0].name}
-        Age={(this.state.data)[0].Age}
-        address={(this.state.data)[0].address.lane}
-        city={(this.state.data)[0].address.city}
-        States={(this.state.data)[0].address.state}
-        emailaddress={(this.state.data)[0].EmailAddress}
-        telephone={(this.state.data)[0].Telephone}
-        />
-        <InputComponent  Id={"2"}
-        name={"Loveleen Popli"}
-        Age={25}
-        address={(this.state.data)[0].address.lane}
-        city={(this.state.data)[0].address.city}
-        States={(this.state.data)[0].address.state}
-        emailaddress={"loveleen.popli@gmail.com"}
-        telephone={"+91 7845362714"}
-        />
-
-        <InputComponent  Id={"3"}
-        name={"Anupam Jagatdeo"}
-        Age={26}
-        address={(this.state.data)[0].address.lane}
-        city={(this.state.data)[0].address.city}
-        States={(this.state.data)[0].address.state}
-        emailaddress={"anupam.jagatdeo@gmail.com"}
-        telephone={"+91 810499669"}
-        />
-
-        <InputComponent  Id={"4"}
-        name={"Shivani Goswami"}
-        Age={26}
-        address={(this.state.data)[0].address.lane}
-        city={(this.state.data)[0].address.city}
-        States={(this.state.data)[0].address.state}
-        emailaddress={"shivani.goswami@gmail.com"}
-        telephone={"+91 9734545723"}
-        />
+        {
+          this.state.data.map(eachData => {
+            return(
+             <InputComponent  Id={eachData.id}
+             name={eachData.name}
+             Age={eachData.Age}
+             address={eachData.address.lane}
+             city={eachData.address.city}
+             States={eachData.address.state}
+             emailaddress={eachData.EmailAddress}
+             telephone={eachData.Telephone}
+                  />
+            );
+           })
+          
+        }
+        
+        
 
       </div>
     );
