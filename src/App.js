@@ -16,6 +16,44 @@ state={ data:[
                        },
              EmailAddress:"kakkarashina@gmail.com",
              Telephone:"+91 9611541182"
+        },
+        {
+          id: "2",
+          name:"Loveleen popli",
+          Age:25,
+          address : {
+          lane: "BTM Layout",
+          city:"Bengaluru",
+          state:"Karnataka"
+                    },
+          EmailAddress:"Loveleen.Popli@gmail.com",
+          Telephone:"+91 984512875"
+
+
+        },
+        {
+           id: "3",
+             name:"Anupam Jagatdeo",
+             Age:26,
+             address : {
+             lane: "Mantri Celestia Nanakramguda",
+             city:"Hyderabad",
+             state:"Telangana"
+                       },
+             EmailAddress:"anupam.jagatdeo@gmail.com",
+             Telephone:"+91 8105499669"
+        },
+        {
+          id: "4",
+          name:"Shivani Goswami",
+          Age:25,
+          address : {
+          lane: "BTM Layout near Udupi Garden",
+          city:"Bengaluru",
+          state:"Karnataka"
+                    },
+          EmailAddress:"shivani.goswami@gmail.com",
+          Telephone:"+91 7894586231"
         }
       ]
 }
