@@ -6,35 +6,64 @@ import InputComponent from './FBAppComponent/InputComponent'
 class App extends Component {
 
 state={ data:[
-        {    id: "",
+        {    id: "1",
              name:"Ashina Kakkar",
-             Age:0,
+             Age:25,
              address : {
-             lane: "",
-             city:"",
-             state:""
+             lane: "B4/330 Nethravati Block NGV Kormangala",
+             city:"Bengaluru",
+             state:"Karnataka"
                        },
-             EmailAddress:"",
-             Telephone:""
+             EmailAddress:"kakkarashina@gmail.com",
+             Telephone:"+91 9611541182"
         }
       ]
 }
 
-TextChangeHandler = (event) => 
-{
-  this.setState({
-    data : event.target.value
-  })
-}
+
  render() {
     return (
       <div className="App">
         <HeaderComponent Header="Welcome to My React App..!!!" />
-        <InputComponent ChangeHandler={this.TextChangeHandler} Id={this.state.data.map(
-          (data) => {
-             return data.id;
-          }
-        )}  />
+        <InputComponent  Id={(this.state.data)[0].id}
+        name={(this.state.data)[0].name}
+        Age={(this.state.data)[0].Age}
+        address={(this.state.data)[0].address.lane}
+        city={(this.state.data)[0].address.city}
+        States={(this.state.data)[0].address.state}
+        emailaddress={(this.state.data)[0].EmailAddress}
+        telephone={(this.state.data)[0].Telephone}
+        />
+        <InputComponent  Id={"2"}
+        name={"Loveleen Popli"}
+        Age={25}
+        address={(this.state.data)[0].address.lane}
+        city={(this.state.data)[0].address.city}
+        States={(this.state.data)[0].address.state}
+        emailaddress={"loveleen.popli@gmail.com"}
+        telephone={"+91 7845362714"}
+        />
+
+        <InputComponent  Id={"3"}
+        name={"Anupam Jagatdeo"}
+        Age={26}
+        address={(this.state.data)[0].address.lane}
+        city={(this.state.data)[0].address.city}
+        States={(this.state.data)[0].address.state}
+        emailaddress={"anupam.jagatdeo@gmail.com"}
+        telephone={"+91 810499669"}
+        />
+
+        <InputComponent  Id={"4"}
+        name={"Shivani Goswami"}
+        Age={26}
+        address={(this.state.data)[0].address.lane}
+        city={(this.state.data)[0].address.city}
+        States={(this.state.data)[0].address.state}
+        emailaddress={"shivani.goswami@gmail.com"}
+        telephone={"+91 9734545723"}
+        />
+
       </div>
     );
   }

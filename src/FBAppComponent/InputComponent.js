@@ -4,25 +4,27 @@ import './FbAppComp.css'
 const InputComponent = (props) =>
 {
     return (
-        <div class="div" onClick={props.ChangeHandler}>
-        <div>
+        <div class="div" >
+        <table>
+         <tr> 
         <label> Id: {props.Id} </label>
-        </div>
-        <div>
+        </tr>
+        <tr> 
         <label> Name: {props.name} </label>
-        </div>
-        <div>
+        </tr> 
+        <tr> 
         <label> Age:  {props.Age} </label>
-        </div>
-        <div>
-        <label> Address: {props.address}  </label>
-        </div>
-        <div>
+        </tr> 
+        <tr> 
+        <label> Address: {props.address} , {props.city} ,{props.States}  </label>
+        </tr> 
+        <tr> 
         <label> EmailAddress: {props.emailaddress} </label>
-        </div>
-        <div>
+        </tr> 
+        <tr> 
         <label> Telephone No: {props.telephone} </label>
-        </div>
+        </tr> 
+        </table>
         </div>
     );
 }
